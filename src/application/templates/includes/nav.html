@@ -1,0 +1,20 @@
+<header>
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <li><a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename = 'images/logo.png') }}"></a> </li> Instagram Crawler
+        </div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+            <!-- USING CHECKBOX HACK -->
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('profile') }}">Anonymous Search</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+
+            </div>
+        </ul>
+    </nav>
+
+</header>

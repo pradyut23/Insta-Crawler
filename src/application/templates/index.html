@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="headertxt">
+        <h1>Welcome to Instagram Crawler</h1>
+    </div>
+    
+    <div class='title'>
+        <div class="signup_link"></div>
+            ANONYMOUS SEARCH ? <a href="{{ url_for('profile') }}">CLICK HERE </a>
+        </div>
+    </div>
+    
+    <br>
+    
+    <div class="center">
+        <div class="signup_link">
+            Already Registered? <a href="{{ url_for('login') }}">Login</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="center">
+    <h1>Login</h1>
+    <form name="anonymous" , action="" , method="POST" nonvalidate>
+        {{ form.hidden_tag() }}
+        <div class="txt_field">
+            {{ form.user() }}
+            {% for error in form.user.errors %}
+            <span class="error-message"> {{ error }}</span>
+            {% endfor %}
+        </div>
+
+        <div class="txt_field">
+            {{ form.password() }}
+            {% for error in form.password.errors %}
+            <span class="eror-message"> {{ error }}</span>
+            {% endfor %}
+        </div>
+
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
+</div>
+{% endblock %}

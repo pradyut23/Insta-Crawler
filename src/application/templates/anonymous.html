@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1>{{ name }}</h1>
+        <h4>{% if verified %} Verified {% endif %}</h4>
+        <p>Bio: {{ bio }}</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Category</th>
+                    <th scope="col">Reels</th>
+                    <th scope="col">Posts</th>
+                    <th scope="col">Followers</th>
+                    <th scope="col">Following</th>
+                    <th scope="col">Profile_Pic</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <!-- Construct the rest of the enrolled courses here -->
+                <tr>
+                    <td scope = "row"> {{ category }} </td>
+                    <td> {{ reels }} </td>
+                    <td> {{ posts }} </td>
+                    <td> {{ followers }} </td>
+                    <td> {{ following }} </td>
+                    {% if pic %}
+                        <td> <a href="{{ pic }}">{{ name }}</a></td>
+                    {% endif %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
